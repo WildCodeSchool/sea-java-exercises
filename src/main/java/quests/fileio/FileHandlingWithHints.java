@@ -7,19 +7,25 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileHandling {
+public class FileHandlingWithHints {
 
     public static void main(String[] args) throws IOException {
         // 1. Read file from new File("src/test/resources/kunden.csv").
         // Use NIO for file reading, the NIO static utility method Files.readAllLines
         // returns a List<String> of all lines in the file, each line one entry of the list
+        File csv = new File("src/test/resources/kunden.csv");
+        List<String> allLines = Files.readAllLines(csv.toPath());
 
-        // 2. Split each line into a String array, use the correct separator string ",".
-        // Each line consists of "id,name,email" of a Kunde.
-
-        // 3. Convert each line into an object of class Kunde, which already has a suitable constructor (id,name,email)
-
-        // 4. Add all Kunde objects to a new List<Kunde>
+        List<Kunde> kundenListe = new ArrayList<>();
+        for (String line : allLines) {
+            // 2. Split each line into a String array, use the correct separator string ",".
+            // Each line consists of "id,name,email" of a Kunde.
+            String[] idAndNameAndMail = line.split(",");
+            // 3. Convert each line into an object of class Kunde, which already has a suitable constructor (id,name,email)
+            Kunde kunde; // add here instantiation of new Kunde(...)
+            // 4. Add all Kunde objects to a new List<Kunde>
+            kundenListe.add(kunde);
+        }
 
         // 5. In this FileHandling class is a static method searchForId which takes the List<Kunde> and a String searchId, searches for the Kunde with this searchId as ID and returns the name
         // Implement this method
