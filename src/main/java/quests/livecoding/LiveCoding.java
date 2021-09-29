@@ -14,7 +14,7 @@ public class LiveCoding {
     public static void main(String[] args) throws IOException {
         File input = new File("src/test/resources/kunden.csv");
         if (input.exists()) {
-            // Dateneingabe aus CSV-Datei
+            // Dateneingabe aus CSV-Datei und jetzt neu
             List<String> zeilen = Files.readAllLines(input.toPath());
             // Datentransformation
             List<Kunde> kundenListe = new ArrayList<>();
