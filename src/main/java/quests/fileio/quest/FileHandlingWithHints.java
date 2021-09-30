@@ -1,4 +1,4 @@
-package quests.fileio;
+package quests.fileio.quest;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -13,7 +13,7 @@ public class FileHandlingWithHints {
         // 1. Read file from new File("src/test/resources/kunden.csv").
         // Use NIO for file reading, the NIO static utility method Files.readAllLines
         // returns a List<String> of all lines in the file, each line one entry of the list
-        File csv = new File("src/test/resources/kunden.csv");
+        /*File csv = new File("src/test/resources/kunden.csv");
         List<String> allLines = Files.readAllLines(csv.toPath());
 
         List<Kunde> kundenListe = new ArrayList<>();
@@ -24,8 +24,8 @@ public class FileHandlingWithHints {
             // 3. Convert each line into an object of class Kunde, which already has a suitable constructor (id,name,email)
             Kunde kunde; // add here instantiation of new Kunde(...)
             // 4. Add all Kunde objects to a new List<Kunde>
-            kundenListe.add(kunde);
-        }
+            // kundenListe.add(kunde);
+        }*/
 
         // 5. In this FileHandling class is a static method searchForId which takes the List<Kunde> and a String searchId, searches for the Kunde with this searchId as ID and returns the name
         // Implement this method
@@ -38,7 +38,7 @@ public class FileHandlingWithHints {
         // 8. Push all your changes to your fork of the repo
     }
 
-    public static String searchForId(List<Kunde> kunden, String searchId) {
+ /*   public static String searchForId(List<Kunde> kunden, String searchId) {
         // Iterate through the list, search for the id and return the name if found.
         return "THE RESULTING ID";
     }
@@ -52,5 +52,5 @@ public class FileHandlingWithHints {
         File out = new File("src/test/resources/sorted_kunden.csv");
         FileWriter writer = new FileWriter(out);
         // Write each line to the file. If it looks funny, maybe you have to add a line separator (System.lineSeparator())
-    }
+    }*/
 }

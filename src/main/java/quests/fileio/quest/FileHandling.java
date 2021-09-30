@@ -1,4 +1,6 @@
-package quests.fileio;
+package quests.fileio.quest;
+
+import dojos.dojo30092021.Kunde;
 
 import java.io.File;
 import java.io.FileWriter;

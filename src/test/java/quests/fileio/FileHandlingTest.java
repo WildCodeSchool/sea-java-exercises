@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FileHandlingTest {
 
+    /*
     @Test
     public void testSearchForId() {
         List<Kunde> kunden = new ArrayList<>();
@@ -53,4 +54,6 @@ public class FileHandlingTest {
         assertEquals("Adrienne Goodman", kunden.get(0).getName());
         assertEquals("Whoopi Preston", kunden.get(kunden.size()-1).getName());
     }
+    */
+     
 }
