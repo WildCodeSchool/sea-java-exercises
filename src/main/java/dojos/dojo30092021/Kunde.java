@@ -1,6 +1,6 @@
 package dojos.dojo30092021;
 
-public class Kunde {
+public abstract class Kunde {
 
     // attributes
     protected String id;
@@ -23,5 +23,7 @@ public class Kunde {
     public String getEmail() {
         return email;
     }
+
+    public abstract double berechneRabatt(int wert);
 
 }
