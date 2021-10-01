@@ -22,6 +22,20 @@
     * For each file: Split each line into a String array, use the correct separator string ","
     * For each line: Convert each line into an object of the correct type of Kunde, which already has a suitable constructor (id,name,email)
 
+**Conversionlogic as Pseudo-Code**
+```
+IF (TYPE='E')
+   NEW EXKLUSIVKUNDE
+ELSE IF (TYPE='V')
+   NEW VIKUNDE
+ELSE IF (TYPE='S') AND (AGE < 25)
+   NEW JUNIORKUNDE
+ELSE IF (TYPE='S') AND (LAST_PURCHASE < 90 DAYS)
+   NEW STANDARDKUNDE_MIT_POTENTIAL
+ELSE 
+   NEW STANDARDKUNDE_OHNE_POTENTIAL
+```
+
 3. Add all Kunde objects to a new `List<Kunde>`
 
 **This should be implemented in class `KundeReporting`**
