@@ -16,6 +16,7 @@
    * The type of Kunde is determined by the last column of the CSV file: S,E,V
 
 **This should be implemented in class `KundeImporter`**
+
 2. Read `Kunden` from `new File("src/test/resources/kunden_reports.csv")`.
 
     * For each file: Split each line into a String array, use the correct separator string ","
