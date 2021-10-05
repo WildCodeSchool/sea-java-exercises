@@ -10,17 +10,17 @@
 
 1. Create classes and class dependencies as described in the diagram
    * All Kunden have *ID*, *name*, *email address*, *birthdate* and *lastPurchase* date
-   * The following types of Kunden exists: `StandardKunde`, `ExklusivKunde`, `VIKunde`, `JuniorKunde`
-   * There are two specializations of `StandardKunde`: `StandardKundeMitPotential` and `StandardKundeOhnePotential`
+   * The following types of Kunden exists: `StandardKunde`, `ExklusivKunde`, `VIKunde`
+   * There are two specializations of `StandardKunde`: `StandardKundeMitPotential`, `StandardKundeOhnePotential` and `JuniorKunde`
    * All Kunden implement a `berechneRabatt(int wert)` method, which calculates and returns the discount depending on the type of Kunde
    * The type of Kunde is determined by the last column of the CSV file: S,E,V
 
 **This should be implemented in class `KundeImporter`**
 
-2. Read `Kunden` from `new File("src/test/resources/kunden_reports.csv")`.
+2. Read `Kunden` from `new File("src/test/resources/kunden_reporting.csv")`.
 
     * For each file: Split each line into a String array, use the correct separator string ","
-    * For each line: Convert each line into an object of the correct type of Kunde, which already has a suitable constructor (id,name,email)
+    * For each line: Convert each line into an object of the correct type of Kunde
     
 _Note: If a line cannot be converted due to errors, log the ID and continue processing_
 
