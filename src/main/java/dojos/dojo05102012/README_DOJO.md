@@ -40,12 +40,12 @@ ELSE
 
 3. Add all Kunde objects to a new `List<Kunde>`
 
-**This should be implemented in class `KundeReporting`**
+**This should be implemented in class `KundeReporting`, the class and the methods should be implemented using TDD**
 
 4. Create a method which prints only Kunden of type parameter, `List<Kunde> filterKunden(List<Kunde> allKunden, String type)`
 5. Create a method which sorts `List<Kunde>` for `name`
 6. Create a method which sorts `List<Kunde>` for `lastPurchase`
 
-**This should be implemented in class `KundeSales`**
+**This should be implemented in class `KundeSales`, the class and the method should be implemented using TDD**
 
-7. Create a method `void sendNewsletter(List<Kunde> allKunden)` which sends a newsletter to `VI-Kunden` and `StandardKundenMitPotential`: **Hello NAME, you are invited to our new product demo.**
+7. Create a method `sendNewsletter(List<Kunde> allKunden)` which sends a newsletter to `VI-Kunden` and `StandardKundenMitPotential`: **Hello NAME, you are invited to our new product demo.**
