@@ -8,7 +8,15 @@ public class CustomerReportingDojo {
 
     public static void main(String[] args) {
         File inputKunden = new File("src/test/resources/kunden_reporting.csv");
+        List<Kunde> kundenListe = KundeImporter.importKunden(inputKunden);
 
+        for (Kunde kunde : kundenListe) {
+            //System.out.println(kunde.begruesse());
+            System.out.println(kunde.berechneRabatt(100));
+            if (kunde instanceof ExklusivKunde) {
+                //System.out.println("Ich bin exklusiv!");
+            }
+        }
         // For instructions see README_DOJO.md
         // For Datehandling use DateUtil.convertStringToDate(...)
 
