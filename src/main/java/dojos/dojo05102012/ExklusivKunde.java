@@ -1,9 +1,10 @@
 package dojos.dojo05102012;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ExklusivKunde extends Kunde{
-    public ExklusivKunde(String id, String name, String email, Date geburtstag, Date letzterKauf) {
+    public ExklusivKunde(String id, String name, String email, LocalDate geburtstag, LocalDate letzterKauf) {
         super(id, name, email, geburtstag, letzterKauf);
     }
 

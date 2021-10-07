@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -41,15 +43,15 @@ ELSE
                 String type = temp[5];
 
                 try {
-                    Date birthDate = DateUtil.convertStringToDate(birthDay);
-                    Date lastBuyDate = DateUtil.convertStringToDate(lastBuy);
+                    LocalDate birthDate = DateUtil.convertStringToLocalDate(birthDay);
+                    LocalDate lastBuyDate = DateUtil.convertStringToLocalDate(lastBuy);
                     if (type.equals("E")) {
                         ExklusivKunde exklusivKunde = new ExklusivKunde(id, name, email, birthDate, lastBuyDate);
                         kundenListe.add(exklusivKunde);
                     } else if (type.equals("V")) {
 
                     }
-                } catch (ParseException e) {
+                } catch (DateTimeParseException e) {
                     System.err.println("Konnte das Datum für Kunde " + id + " nicht lesen.");
                 }
 

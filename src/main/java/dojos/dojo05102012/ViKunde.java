@@ -1,9 +1,9 @@
 package dojos.dojo05102012;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ViKunde extends Kunde {
-    public ViKunde(String id, String name, String email, Date geburtstag, Date letzterKauf) {
+    public ViKunde(String id, String name, String email, LocalDate geburtstag, LocalDate letzterKauf) {
         super(id, name, email, geburtstag, letzterKauf);
     }
 
