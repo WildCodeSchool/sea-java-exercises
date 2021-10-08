@@ -1,5 +1,8 @@
 package livecoding;
 
+/*
+ Wird nicht genutzt, dient als Negativbeispiel, dass es ohne Generics für jede Klasse einen eigenen Printer geben müsste.
+ */
 public class ApfelPrinter {
 
     private Apfel letztesGedrucktesObjekt;
