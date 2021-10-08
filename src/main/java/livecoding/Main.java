@@ -38,6 +38,7 @@ public class Main {
         // Achtung, hier muss ich implizit wissen, dass es ein Double ist, sonst gibt es einen Laufzeitfehler
         Double aDouble = (Double) list.get(2);
 
+        // Hier ist spezifiziert, welche Elemente enthalten sein dürfen, Fehler zur Laufzeit sind nicht möglich!
         List<String> zeilen = new ArrayList<>();
         zeilen.add("super witz");
         List<Double> zahlen = new ArrayList<>();
