@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -49,7 +50,21 @@ ELSE
                         ExklusivKunde exklusivKunde = new ExklusivKunde(id, name, email, birthDate, lastBuyDate);
                         kundenListe.add(exklusivKunde);
                     } else if (type.equals("V")) {
-
+                        ViKunde viKunde = new ViKunde(id, name, email, birthDate, lastBuyDate);
+                        kundenListe.add(viKunde);
+                    } else if(type.equals("S")) {
+                        boolean juengerAls25 = Period.between(birthDate, LocalDate.now()).getYears() < 25;
+                        boolean letztenKaufInnerhalb90Tage = Period.between(lastBuyDate, LocalDate.now()).getDays() < 90;
+                        if (juengerAls25) {
+                            JuniorKunde juniorKunde = new JuniorKunde(id, name, email, birthDate, lastBuyDate);
+                            kundenListe.add(juniorKunde);
+                        } else if (letztenKaufInnerhalb90Tage) {
+                            StandardKundeMitPotential potentialKunde = new StandardKundeMitPotential(id, name, email, birthDate, lastBuyDate);
+                            kundenListe.add(potentialKunde);
+                        } else {
+                            StandardKundeOhnePotential standardKunde = new StandardKundeOhnePotential(id, name, email, birthDate, lastBuyDate);
+                            kundenListe.add(standardKunde);
+                        }
                     }
                 } catch (DateTimeParseException e) {
                     System.err.println("Konnte das Datum für Kunde " + id + " nicht lesen.");
