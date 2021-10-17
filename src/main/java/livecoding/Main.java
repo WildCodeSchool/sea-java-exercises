@@ -21,9 +21,9 @@ public class Main {
 
         // Erstelle einen typ-sicheren Kundenprinter
         Printer<Apfel> apfelPrinter = new Printer();
-        Apfel apfel = new Apfel();
+        Apfel apfel = new Apfel("a", 1);
         apfelPrinter.print(apfel);
-        Apfel apfel1 = new Apfel();
+        Apfel apfel1 = new Apfel("b", 2);
         apfelPrinter.print(apfel1);
 
         Kunde letzterGedruckterKunde = kundePrinter.lastPrinted();
