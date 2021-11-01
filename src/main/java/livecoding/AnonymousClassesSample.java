@@ -20,6 +20,8 @@ public class AnonymousClassesSample {
         };
 
         // Alternative zu anonymous inner classes: Lambdas
+        Comparator<Apfel> apfelComparator2 = (o1, o2) -> 1;
+
         Collections.sort(apfelKorb, apfelComparator1);
 
         AnonymousClassesSample.Entry entry = new Entry();
